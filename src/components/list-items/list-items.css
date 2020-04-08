@@ -1,0 +1,25 @@
+.list-items {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.item {
+  width: 20%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 3px;
+  border: 1px solid grey;
+  text-align: center;
+}
+
+
+.item-deadths {
+  font-weight: bold;
+}
+
+.item-deadths span {
+  color:red;
+}
