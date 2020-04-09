@@ -17,11 +17,15 @@ export const AppContextProvider = ({children}) => {
   }
 
 
-  const searchBuCountry = (country) => {
-    const resultSarch = items.filter(item => item.country === country)
+  const searchBuCountry = async (country) => {
+    setLoading(true)
+    const response = await fetch(`https://coronavirus-19-api.herokuapp.com/countries/${country}`);
+    const data = await response.json();
+    console.log(data);
     setItems([
-      ...resultSarch
-    ])
+      data
+    ]);
+    setLoading(false);
   }
 
 
